@@ -1,18 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import rospy
-from std_msgs.msg import Float32
-import math 
-
+from std_msgs.msg import Int32
 rospy.init_node('topic_publisher')
-pub = rospy.Publisher('counter', Float32, queue_size=50)
+pub = rospy.Publisher('counter', Int32)
 rate = rospy.Rate(2)
-a =  float(input("Enter values of a:"))
-b =  float(input("Enter values of b:"))
-c =  float(input("Enter values of c:"))
-x1=(-b+math.sqrt(b*b-4*a*c))/2*a
-x2=(-b-math.sqrt(b*b-4*a*c))/2*a
+count = 0
 while not rospy.is_shutdown():
-    pub.publish(x1)
-    pub.publish(x2)
-    #count += 1
-    rate.sleep()
+     pub.publish(count)
+     count += 1
+     rate.sleep()
