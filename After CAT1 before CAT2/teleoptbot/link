@@ -8,3 +8,4 @@ keys_to_twist_parameterized.py
 
 keys_to_twist_with_ramps.py
 ./keys_to_twist_with_ramps.py _linear_scale:=0.5 _angular_scale:=1.0 _linear_accel:=1.0 _angular_accel:=1.0
+https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#gazebo-simulation
